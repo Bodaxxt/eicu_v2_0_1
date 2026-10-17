@@ -1,0 +1,5 @@
+severity_level,severity_label,count,percentage
+3,CRITICAL,347,20.3
+2,HIGH,179,10.5
+1,MODERATE,741,43.4
+0,STABLE,439,25.7

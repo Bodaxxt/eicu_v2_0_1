@@ -1,0 +1,293 @@
+{
+  "bundle_name": "ICU Guard v4.2 — Agent Bundle",
+  "version": "4.2.0",
+  "exported_at": "2026-10-13T17:45:15.108394Z",
+  "model_type": "XGBoost (Multi-Target, Leakage-Free, Platt-Calibrated)",
+  "dataset": "eICU Collaborative Research Database v2.0.1",
+  "cohort_size": 1706,
+  "test_set_size": 342,
+  "thresholds": {
+    "mortality": 0.2776554524898529,
+    "deterioration": 0.37326592206954956,
+    "severe": 0.573796272277832
+  },
+  "metrics": {
+    "mortality": {
+      "test_auroc": 0.8346369946017406,
+      "ci_lower": 0.7470550743840082,
+      "ci_upper": 0.9081256139440163,
+      "cv_auroc_mean": 0.838779302718119,
+      "cv_auroc_std": 0.01643971208996778,
+      "test_auprc": 0.4208040795095162,
+      "sens_at_80spec": 0.7241379310344828,
+      "sens_at_90spec": 0.6206896551724138,
+      "test_brier": 0.07403437434688455,
+      "threshold": 0.2776554524898529
+    },
+    "deterioration": {
+      "test_auroc": 0.8646631706333199,
+      "ci_lower": 0.8113916917131816,
+      "ci_upper": 0.9086303540650555,
+      "cv_auroc_mean": 0.8781106440623943,
+      "cv_auroc_std": 0.03146413704634644,
+      "test_auprc": 0.6821495724916046,
+      "sens_at_80spec": 0.7702702702702703,
+      "sens_at_90spec": 0.6486486486486487,
+      "test_brier": 0.12163762477520554,
+      "threshold": 0.37326592206954956
+    },
+    "severe": {
+      "test_auroc": 0.7591297591297591,
+      "ci_lower": 0.693818510366746,
+      "ci_upper": 0.8189792278210952,
+      "cv_auroc_mean": 0.6987717891360318,
+      "cv_auroc_std": 0.0510528070202979,
+      "test_auprc": 0.9001835430276429,
+      "sens_at_80spec": 0.5340909090909091,
+      "sens_at_90spec": 0.3143939393939394,
+      "test_brier": 0.18272362145537055,
+      "threshold": 0.573796272277832
+    }
+  },
+  "feature_importances": {
+    "mortality": [
+      {
+        "feature": "gender",
+        "importance": 0.0
+      },
+      {
+        "feature": "bun_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_mean",
+        "importance": 0.0
+      }
+    ],
+    "deterioration": [
+      {
+        "feature": "gender",
+        "importance": 0.0
+      },
+      {
+        "feature": "bun_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "bun_missing",
+        "importance": 0.0
+      }
+    ],
+    "severe": [
+      {
+        "feature": "gender",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "paco2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_max",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_min",
+        "importance": 0.0
+      },
+      {
+        "feature": "pao2_mean",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_missing",
+        "importance": 0.0
+      },
+      {
+        "feature": "ph_max",
+        "importance": 0.0
+      }
+    ]
+  },
+  "interpretation_rules": {
+    "mortality": {
+      "high": {
+        "threshold": 0.2776554524898529,
+        "label": "Elevated Mortality Risk",
+        "action": "Immediate attending notification"
+      },
+      "medium": {
+        "threshold": 0.13882772624492645,
+        "label": "Moderate Mortality Risk",
+        "action": "Increased monitoring frequency"
+      },
+      "low": {
+        "threshold": 0.0,
+        "label": "Low Mortality Risk",
+        "action": "Routine care"
+      }
+    },
+    "deterioration": {
+      "high": {
+        "threshold": 0.37326592206954956,
+        "label": "High Deterioration Risk",
+        "action": "Prepare escalation protocol"
+      },
+      "medium": {
+        "threshold": 0.18663296103477478,
+        "label": "Moderate Deterioration Risk",
+        "action": "Reassess in 2h"
+      },
+      "low": {
+        "threshold": 0.0,
+        "label": "Stable",
+        "action": "Continue monitoring"
+      }
+    },
+    "severe": {
+      "high": {
+        "threshold": 0.573796272277832,
+        "label": "Severely Ill — ICU Level Care",
+        "action": "ICU-level resources"
+      },
+      "medium": {
+        "threshold": 0.3442777633666992,
+        "label": "Moderately Severe",
+        "action": "Step-up monitoring"
+      },
+      "low": {
+        "threshold": 0.0,
+        "label": "Clinically Stable",
+        "action": "Standard monitoring"
+      }
+    }
+  },
+  "severity_labels": {
+    "RED": "Critical — Immediate Escalation Required",
+    "ORANGE": "High Risk — Urgent Clinical Review",
+    "YELLOW": "Moderate Risk — Close Monitoring",
+    "GREEN": "Low Risk — Routine Care"
+  },
+  "calibration": {
+    "method": "Platt Scaling (Logistic Regression on calibration set)",
+    "mortality_hl_pval_before": 0.01,
+    "mortality_hl_pval_after": 0.378,
+    "note": "Models are post-hoc calibrated. Use recalibrated probabilities only."
+  },
+  "clinical_notes": [
+    "This model is a DECISION SUPPORT tool — NOT a replacement for clinical judgment.",
+    "All predictions require clinician-in-the-loop verification.",
+    "Validated on eICU v2.0.1 only; external validation required before deployment.",
+    "SaMD Classification: FDA Class II / EU MDR Class IIb (proposed).",
+    "Fairness audit passed: no significant disparity across age/gender subgroups."
+  ],
+  "targets": {
+    "y_mortality": {
+      "prevalence_pct": 8.56,
+      "features": 110,
+      "description": "28-day all-cause ICU mortality"
+    },
+    "y_deterioration": {
+      "prevalence_pct": 25.09,
+      "features": 108,
+      "description": "Clinical deterioration within 12h (vasopressors/ventilation onset)"
+    },
+    "y_severe": {
+      "prevalence_pct": 78.49,
+      "features": 102,
+      "description": "High disease severity (APACHE-equivalent composite)"
+    }
+  }
+}

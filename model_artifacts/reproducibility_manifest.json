@@ -1,0 +1,25 @@
+{
+  "system_manifest": {
+    "project": "ICU Guard v4.2 - Production Architecture",
+    "timestamp": "2026-10-13T20:15:00Z",
+    "environment": {
+      "python_version": "3.13.5",
+      "platform": "Windows 10 (AMD64)",
+      "deterministic_seed": 42
+    },
+    "database": {
+      "name": "eICU Collaborative Research Database (eICU-CRD)",
+      "version": "v2.0.1",
+      "format": "SQLite & CSV",
+      "patient_count": 1706
+    },
+    "dependencies": {
+      "xgboost": "3.4.1",
+      "scikit_learn": "1.6.1",
+      "shap": "0.53.0",
+      "scipy": "1.15.1",
+      "pandas": "2.2.3",
+      "numpy": "2.1.3"
+    }
+  }
+}
